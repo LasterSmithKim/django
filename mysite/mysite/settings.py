@@ -119,3 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# 定义静态文件目录
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),)
+
+# 添加默认的静态目录[收集使用]
+STATIC_ROOT = os.path.join(BASE_DIR, "static_all")
