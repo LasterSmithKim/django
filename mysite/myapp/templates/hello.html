@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block title %}My Hello Page{% endblock %}
+{% block content %}
+        Hello World!!!<p>Today is {{today}}</p>
+        <p>{{today.year}}</p>
+        <p>{{today.year}}</p><!--#显示对象的属性-->
+        <p>{{str|lower|escape|linebreaks}}</p><!--#过滤方法 3.0 部分方法名称变化-->
+         {% for i in arr %}
+         {{i}}
+         {% endfor %}
+
+        </br><a href="127.0.0.1:8000/redirect">Django - Page Redirection:127.0.0.1:8000/redirect</a>
+{% endblock %}
