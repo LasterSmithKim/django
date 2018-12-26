@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -21,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zbot=vx^73m@07**#7j*w8q2nd_$mf0q7&)(nkv#mdkyjwar6!'
+SECRET_KEY = 'l@r4wu&-_5slr)c5r+r&f)p$mkoy$(9w(@851n*j61$23ae)m$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -120,11 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-# 定义静态文件目录
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),)
-
-# 添加默认的静态目录[收集使用]
-STATIC_ROOT = os.path.join(BASE_DIR, "static_all")
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+IMPORT_EXPORT_USE_TRANSACTIONS = True
